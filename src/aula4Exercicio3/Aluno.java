@@ -2,9 +2,25 @@ package aula4Exercicio3;
 
 public class Aluno extends ObjetoComparavel {
 	
+	/**
+	 * 
+	 */
 	private String nome;
-	private String cidade;
 	
+	/**
+	 * 
+	 */
+	private int idade;
+	
+	/**
+	 * Construtor
+	 * @param nome
+	 * @param idade
+	 */
+	public Aluno(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}
 	
 	public String getNome() {
 		return nome;
@@ -12,15 +28,21 @@ public class Aluno extends ObjetoComparavel {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCidade() {
-		return cidade;
+	public int getIdade() {
+		return idade;
 	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 	
 	@Override
-	public void comparar(Comparavel outro) {
-		
-	}	
+	public int comparar(Comparavel aluno) {
+		Aluno outroAluno = (Aluno) aluno;
+        if (this.idade < outroAluno.idade)
+            return -1;
+        else if (this.idade > outroAluno.idade)
+            return 1;
+        else
+            return 0;
+    }
 }
