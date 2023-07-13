@@ -11,7 +11,7 @@ public class Main {
 		ProcessadorPagamento cartao = new PagamentoCartao();
         ProcessadorPagamento boleto = new PagamentoBoleto();
 
-        double valorPago = 100.50;
+        double valorPago = 69.35;
         cartao.processadorPagamento(valorPago);
         boleto.processadorPagamento(valorPago);
     }
